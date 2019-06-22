@@ -185,7 +185,7 @@ gzip)	# If we're doing a reproducible build, use gzip -n
 	fi
 	;;
 lz4)	compress="lz4 -9 -l" ;;
-xz)	compress="xz --check=crc32" ;;
+xz)	compress="xz --check=crc32 -T0 --block-size=1m" ;;
 bzip2|lzma|lzop)
 	# no parameters needed
 	;;
