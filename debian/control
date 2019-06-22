@@ -27,7 +27,7 @@ Architecture: all
 Multi-Arch: foreign
 Recommends: ${busybox:Recommends}, pigz
 Depends: klibc-utils (>= 2.0.4-8~), cpio (>= 2.12), kmod, udev, coreutils (>= 8.24), e2fsprogs, ${misc:Depends}
-Suggests: bash-completion
+Suggests: bash-completion, pbzip2
 Breaks: initramfs-tools (<< 0.121~), ${busybox:Breaks}
 Replaces: initramfs-tools (<< 0.121~)
 Description: generic modular initramfs generator (core tools)

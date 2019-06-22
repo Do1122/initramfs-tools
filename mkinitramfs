@@ -185,8 +185,14 @@ gzip)	# If we're doing a reproducible build, use gzip -n
 	fi
 	;;
 lz4)	compress="lz4 -9 -l" ;;
-xz)	compress="xz --check=crc32" ;;
-bzip2|lzma|lzop)
+xz)	compress="xz --check=crc32 -T0 --block-size=1M" ;;
+bzip2)
+	# substitute pbzip2 if it's available
+	if command -v pbzip2 >/dev/null; then
+		compress=pbzip2
+	fi
+	;;
+lzma|lzop)
 	# no parameters needed
 	;;
 *)	echo "W: Unknown compression command ${compress}" >&2 ;;
