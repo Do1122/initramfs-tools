@@ -191,6 +191,7 @@ bzip2|lzma|lzop)
 	;;
 *)	echo "W: Unknown compression command ${compress}" >&2 ;;
 esac
+[ "${verbose}" = y ] && echo "Compression command: \"${compress}\""
 
 if [ -d "${outfile}" ]; then
 	echo "${outfile} is a directory" >&2
