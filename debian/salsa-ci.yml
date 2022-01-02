@@ -3,4 +3,4 @@ include:
   - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/pipeline-jobs.yml
 
 variables:
-  RELEASE: 'unstable'
+  RELEASE: 'bullseye'
