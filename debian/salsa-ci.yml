@@ -4,3 +4,6 @@ include:
 
 variables:
   RELEASE: 'bullseye'
+  # reprotest does not honour RELEASE
+  # <https://salsa.debian.org/salsa-ci-team/pipeline/-/issues/57>
+  SALSA_CI_DISABLE_REPROTEST: 'true'
